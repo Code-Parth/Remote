@@ -5,7 +5,7 @@ import socket
 import sys
 import os
 s = socket.socket()
-host = "127.0.0.1"
+host = "192.168.165.25"
 port = 8080
 s.connect((host, port))
 print("Connected to Server.")
