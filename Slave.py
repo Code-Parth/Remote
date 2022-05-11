@@ -11,7 +11,11 @@ s.connect((host, port))
 print("Connected to Server.")
 command = s.recv(1024)
 command = command.decode()
-if command == "open":
+if command == "mkdir":
     print("Command is ", command)
     s.send("Command received". encode())
-    os.system('ls')
+    os.system('mkdir Jenil')
+elif command == "dir":
+    print("Command is ", command)
+    s.send("Command received". encode())
+    os.system('dir /s')
