@@ -5,12 +5,12 @@ import socket
 import sys
 import os
 s = socket.socket()
-host socket.gethostname()
+host = socket.gethostname()
 port = 8880
-s.bind('', port)
-s.Listen()
+s.bind(('', port))
+s.listen()
 conn, addr = s.accept()
-print.(addr, "Ls connected to server")
+print(addr, "Ls connected to server")
 command = Input (str("Enter Command :"))
 conn.send(command.encode())
 print("Command has been sent successfully.")
